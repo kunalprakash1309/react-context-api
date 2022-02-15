@@ -1,18 +1,18 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import 'firebase/compat/auth';
 
-const config = {
-  apiKey: 'AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14',
-  authDomain: 'crwn-db.firebaseapp.com',
-  databaseURL: 'https://crwn-db.firebaseio.com',
-  projectId: 'crwn-db',
-  storageBucket: 'crwn-db.appspot.com',
-  messagingSenderId: '850995411664',
-  appId: '1:850995411664:web:7ddc01d597846f65'
+const firebaseConfig = {
+  apiKey: "AIzaSyBwWevHqmcFjeA0512GBOck3XpiEKMEhww",
+  authDomain: "cloth-kart.firebaseapp.com",
+  projectId: "cloth-kart",
+  storageBucket: "cloth-kart.appspot.com",
+  messagingSenderId: "771685927032",
+  appId: "1:771685927032:web:5cd0f76790d950f14ec58d",
+  measurementId: "G-SN7H93F3ZL"
 };
 
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
